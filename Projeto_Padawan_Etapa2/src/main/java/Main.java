@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -5,26 +7,27 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Integer opcao = 0;
-
-        System.out.println("Digite a opcao que voce deseja: ");
-        opcao = scanner.nextInt();
+        List<Aluno> alunos = new ArrayList<Aluno>();
 
         do {
+            System.out.println("\nDigite a opcao que voce deseja: ");
+            opcao = scanner.nextInt();
+
             switch (opcao) {
                 case 1:
-                    Metodos.cadastrarAluno();
+                    Metodos.cadastrarAluno(alunos);
                     break;
                 case 2:
-                    Metodos.consultarAlunoPorMatricula();
+                    Metodos.consultarAlunoPorMatricula(alunos);
                     break;
                 case 3:
-                    Metodos.listarAlunosAprovados();
+                    Metodos.listarAlunosAprovados(alunos);
                     break;
                 case 4:
-                    Metodos.listarAlunosEmRecuperacao();
+                    Metodos.listarAlunosEmRecuperacao(alunos);
                     break;
                 case 5:
-                    Metodos.listarAlunosreprovados();
+                    Metodos.listarAlunosReprovados(alunos);
                     break;
                 default:
             }

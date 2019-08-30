@@ -11,6 +11,7 @@ public class Aluno {
     private Long notaProva2;
     private Long notaProva3;
     private Long notaExercicos;
+    private StatusAluno status;
 
     public Aluno() {
 
