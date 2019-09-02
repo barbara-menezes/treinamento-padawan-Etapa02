@@ -77,6 +77,12 @@ public class Metodos {
 
     public static void listarAlunosAprovados(List<Aluno> alunos) {
 
+        for (Aluno a: alunos) {
+            if (a.getStatus().equals(StatusAluno.APROVADO)){
+                System.out.println(a.toString());
+            }
+
+        }
     }
 
     public static void listarAlunosReprovados(List<Aluno> alunos) {
